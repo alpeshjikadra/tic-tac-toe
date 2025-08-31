@@ -1,0 +1,25 @@
+workflows:
+  tic-tac-toe:
+    name: Tic Tac Toe
+    max_build_duration: 1200
+    instance_type: mac_mini_m2
+    environment:
+      groups:
+        - codemagic
+      xcode: 15.0
+      cocoapods: default
+    scripts:
+      - name: Set up code signing settings
+        script: |
+          echo "Setting up code signing settings..."
+          xcode-project use-profiles
+      - name: Build
+        script: |
+          echo "Building the app..."
+          xcode-project build --workspace TicTacToe.xcworkspace --scheme TicTacToe
+    artifacts:
+      - build/outputs/**/**/*.app
+    publishing:
+      email:
+        recipients:
+          - alpeshjikadra@yahoo.com
