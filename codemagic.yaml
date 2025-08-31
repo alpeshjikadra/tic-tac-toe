@@ -1,25 +1,46 @@
+# A basic CodeMagic CI/CD configuration for a Flutter Android app.
+# This file defines a single workflow that builds a release APK.
+
+# Defines a single build workflow.
 workflows:
-  tic-tac-toe:
-    name: Tic Tac Toe
-    max_build_duration: 100
-    instance_type: mac_mini_m2
+  android-build:
+    name: Android Build
+    # Specifies the machine environment for the build.
+    # macOS is often used for Flutter builds as it supports both Android and iOS.
+    instance_type: mac-pro
+
+    # Defines environment variables and settings for the build.
     environment:
-      groups:
-        - codemagic
-      xcode: 15.0
-      cocoapods: default
+      flutter: stable
+      # Specify a specific Flutter version if needed.
+      # flutter_version: 3.10.6
+
+    # Defines the trigger for the workflow.
+    # This build will be triggered whenever a new commit is pushed to the 'main' branch.
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: main
+          include: true
+      
+    # Defines the steps to be executed during the build.
     scripts:
-      - name: Set up code signing settings
+      - name: Flutter pub get
         script: |
-          echo "Setting up code signing settings..."
-          xcode-project use-profiles
-      - name: Build
+          flutter pub get
+      - name: Flutter build Android release APK
         script: |
-          echo "Building the app..."
-          xcode-project build --workspace TicTacToe.xcworkspace --scheme TicTacToe
+          flutter build apk --release
+
+    # Defines which files to save from the build.
     artifacts:
-      - build/outputs/**/**/*.app
+      # Saves the generated APK file, which is located in the specified directory.
+      - build/app/outputs/flutter-apk/app-release.apk
+
+    # Defines post-build actions, such as publishing the app or sending notifications.
     publishing:
       email:
+        # Sends an email notification to the specified addresses with the build status.
         recipients:
           - alpeshjikadra@yahoo.com
