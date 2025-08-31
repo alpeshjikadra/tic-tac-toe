@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TicTacToe" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/accent_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent_purple</item>
+        <item name="colorSecondaryVariant">@color/accent_pink</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/background_primary</item>
+        <!-- Navigation bar color -->
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+    </style>
+
+    <style name="Theme.TicTacToe.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Game Board Styles -->
+    <style name="GameBoardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/background_secondary</item>
+        <item name="android:elevation">8dp</item>
+    </style>
+
+    <!-- Game Cell Styles -->
+    <style name="GameCellStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@drawable/cell_background</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="TitleTextStyle">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SubtitleTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="ScoreTextStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_accent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="PlayerSymbolStyle">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="PrimaryButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/button_primary</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="SecondaryButtonStyle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/button_secondary</item>
+        <item name="strokeColor">@color/button_secondary</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_dark">#1A1A2E</color>
+    <color name="primary_medium">#16213E</color>
+    <color name="primary_light">#0F3460</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_blue">#00D4FF</color>
+    <color name="accent_purple">#9D4EDD</color>
+    <color name="accent_pink">#FF006E</color>
+    <color name="accent_orange">#FF8500</color>
+    
+    <!-- Game Colors -->
+    <color name="player_x_color">#00D4FF</color>
+    <color name="player_o_color">#FF006E</color>
+    <color name="board_line_color">#FFFFFF</color>
+    <color name="cell_background">#16213E</color>
+    <color name="cell_background_hover">#0F3460</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_accent">#00D4FF</color>
+    
+    <!-- Background Colors -->
+    <color name="background_primary">#1A1A2E</color>
+    <color name="background_secondary">#16213E</color>
+    <color name="background_card">#0F3460</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary">#00D4FF</color>
+    <color name="button_secondary">#9D4EDD</color>
+    <color name="button_danger">#FF006E</color>
+    
+    <!-- Win Animation Colors -->
+    <color name="win_glow">#FFD700</color>
+    <color name="win_line">#FFFF00</color>
+    
+    <!-- Standard Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

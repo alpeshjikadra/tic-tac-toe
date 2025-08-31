@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="@color/primary_dark"
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0" />
+    
+    <!-- Game board grid -->
+    <group android:translateX="54" android:translateY="54">
+        <!-- Vertical lines -->
+        <path
+            android:strokeColor="@color/accent_blue"
+            android:strokeWidth="3"
+            android:pathData="M-12,-24 L-12,24" />
+        <path
+            android:strokeColor="@color/accent_blue"
+            android:strokeWidth="3"
+            android:pathData="M12,-24 L12,24" />
+        
+        <!-- Horizontal lines -->
+        <path
+            android:strokeColor="@color/accent_blue"
+            android:strokeWidth="3"
+            android:pathData="M-24,-12 L24,-12" />
+        <path
+            android:strokeColor="@color/accent_blue"
+            android:strokeWidth="3"
+            android:pathData="M-24,12 L24,12" />
+        
+        <!-- X symbol -->
+        <path
+            android:strokeColor="@color/player_x_color"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:pathData="M-20,-20 L-4,-4 M-4,-20 L-20,-4" />
+        
+        <!-- O symbol -->
+        <circle
+            android:strokeColor="@color/player_o_color"
+            android:strokeWidth="4"
+            android:fillColor="@android:color/transparent"
+            android:cx="18"
+            android:cy="18"
+            android:radius="6" />
+    </group>
+</vector>
