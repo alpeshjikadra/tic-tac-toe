@@ -27,9 +27,13 @@ workflows:
     # Defines the steps to be executed during the build.
     scripts:
       - name: Flutter pub get
+        # The working_directory command is added to navigate into the Flutter project folder.
+        # This fixes the "Expected to find project root" error.
+        working_directory: ./your-app-folder-name
         script: |
           flutter pub get
       - name: Flutter build Android release APK
+        working_directory: ./your-app-folder-name
         script: |
           flutter build apk --release
 
@@ -43,4 +47,4 @@ workflows:
       email:
         # Sends an email notification to the specified addresses with the build status.
         recipients:
-          - alpeshjikadra@yahoo.com
+          - your.email@example.com
