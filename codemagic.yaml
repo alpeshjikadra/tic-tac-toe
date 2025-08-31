@@ -7,7 +7,7 @@ workflows:
     name: Android Build
     # Specifies the machine environment for the build.
     # macOS is often used for Flutter builds as it supports both Android and iOS.
-    instance_type: mac_mini
+    instance_type: mac_mini_m2
 
     # Defines environment variables and settings for the build.
     environment:
